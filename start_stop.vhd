@@ -21,8 +21,7 @@ entity start_stop is
         povel : in std_logic ;   -- command input signal from the button
     
     -- entity output signals
-        sec_o   : out std_logic --
-          
+        sec_o   : out std_logic -- output clock signal     
     );
 end start_stop;
 
@@ -36,16 +35,15 @@ architecture Behavioral of start_stop is
 begin
 process (povel)
 begin
-            if falling_edge(povel) then
-                s_comb <= s_next;            -- update register value
+        if falling_edge(povel) then
+             s_comb <= s_next;            -- update register value
         end if;
-        end process;
-
+end process;
     --------------------------------------------------------------------------------
-    sec_o <= sec_i when(s_comb = '0') else           -- update register value
-                              '0'; 
+    sec_o <= sec_i when(s_comb = '0') else           
+             '0'; 
     
     s_next <= '0' when (s_comb = '1') else 
-                        '1';
+              '1';
 end Behavioral;
 
