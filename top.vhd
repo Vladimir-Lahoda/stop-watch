@@ -1,3 +1,11 @@
+-----------------------------------------------------------------------
+-- Brno University of Technology, Department of Radio Electronics
+-- Authors: Vladimir Lahoda & Hana Stolarova
+-----------------------------------------------------------------------
+--- TOP file - Connections of individual blocks
+-----------------------------------------------------------------------
+-- Smaller part of a big project TIMER
+-----------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
