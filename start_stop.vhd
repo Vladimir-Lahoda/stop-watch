@@ -40,10 +40,10 @@ begin
         end if;
 end process;
     --------------------------------------------------------------------------------
-    sec_o <= sec_i when(s_comb = '0') else           
+    sec_o <= sec_i when(s_comb = '0') else -- switch of clock signal          
              '0'; 
     
-    s_next <= '0' when (s_comb = '1') else 
+    s_next <= '0' when (s_comb = '1') else -- next register value
               '1';
 end Behavioral;
 
